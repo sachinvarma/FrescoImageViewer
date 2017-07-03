@@ -70,6 +70,12 @@ public class ImageViewer implements OnDismissListener, DialogInterface.OnKeyList
 
     private void createDialog() {
         viewer = new ImageViewerView(builder.context);
+        viewer.getRootView().findViewById(R.id.ivClose).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onDismiss();
+            }
+        });
         viewer.setCustomImageRequestBuilder(builder.customImageRequestBuilder);
         viewer.setCustomDraweeHierarchyBuilder(builder.customHierarchyBuilder);
         viewer.allowZooming(builder.isZoomingAllowed);

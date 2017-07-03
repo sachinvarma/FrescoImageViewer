@@ -25,6 +25,7 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
@@ -128,7 +129,6 @@ class ImageViewerView extends RelativeLayout
 
         backgroundView = findViewById(R.id.backgroundView);
         pager = (MultiTouchViewPager) findViewById(R.id.pager);
-
         dismissContainer = (ViewGroup) findViewById(R.id.container);
         swipeDismissListener = new SwipeToDismissListener(findViewById(R.id.dismissView), this, this);
         dismissContainer.setOnTouchListener(swipeDismissListener);
